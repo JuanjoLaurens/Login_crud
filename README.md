@@ -31,19 +31,31 @@ Biblioteca DataTables
 Proceso de Instalación
 
 - Clonar o descargar el repositorio en la ubicación deseada.
+
 - Iniciar el proyecto CakePHP ejecutando el siguiente comando:
   - **composer create-project --prefer-dist cakephp/app:~4.0 login\_crud**
+  
+
 - Generar una migración para crear la tabla de usuarios con los campos requeridos:
   - **cake bake migration CreateUsers nombre:string apellido:string equipo:string edad:integer email:string:unique password created datetime modified datetime**
+
+
 - Aplicar la migración en la base de datos:
   - **cake migrations migrate**
+
+
 - Crear el modelo y los archivos relacionados:
   - **cake bake model Users**
   - **cake bake all users**
+
+
 - Instalar el paquete de autenticación requerido:
   - **composer require "cakephp/authentication:^2.4"**
+
+
 - Instalar el paquete que funciona para csv y txt
   - **composer require phpoffice/phpspreadsheet**
+
 
 **Componentes y Funcionalidades**
 
