@@ -53,11 +53,11 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('Usuario registrado correctamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('El usuario no pudo ser registrado, intenta de nuevo'));
         }
         $this->set(compact('user'));
     }
@@ -77,11 +77,11 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('Usuario editado.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('El usuario no ha podido ser editado, intenta de nuevo'));
         }
         $this->set(compact('user'));
     }
@@ -98,9 +98,9 @@ class UsersController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
+            $this->Flash->success(__('Usuario eliminado'));
         } else {
-            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+            $this->Flash->error(__('El usuario no ha sido eliminado, intenta de nuevo'));
         }
 
         return $this->redirect(['action' => 'index']);
@@ -114,7 +114,7 @@ class UsersController extends AppController
             return $this->redirect(['controller' => 'Users','action' => 'index']);
         }
         if ($this->request->is('post')) {
-            $this->Flash->error('Invalid username or password');
+            $this->Flash->error('Correo o contraseña equivocada');
         }
 
     }
@@ -153,7 +153,7 @@ class UsersController extends AppController
             $row++;
         }
 
-        $filename = 'users_data.xlsx';
+        $filename = 'Datos de usuario.xlsx';
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         header('Content-Disposition: attachment;filename="' . $filename . '"');
         header('Cache-Control: max-age=0');
@@ -170,7 +170,7 @@ class UsersController extends AppController
             $content .= "ID: {$user->id}, Nombre: {$user->nombre}, Apellido: {$user->apellido}, Equipo: {$user->equipo}, Edad: {$user->edad}, Email: {$user->email}\n";
         }
 
-        $filename = 'users_data.txt';
+        $filename = 'Datos de usuario.txt';
         header('Content-Type: text/plain');
         header('Content-Disposition: attachment;filename="' . $filename . '"');
         echo $content;

@@ -34,7 +34,7 @@ Proceso de Instalación
 
 - Iniciar el proyecto CakePHP ejecutando el siguiente comando:
   - **composer create-project --prefer-dist cakephp/app:~4.0 login\_crud**
-  
+
 
 - Generar una migración para crear la tabla de usuarios con los campos requeridos:
   - **cake bake migration CreateUsers nombre:string apellido:string equipo:string edad:integer email:string:unique password created datetime modified datetime**
@@ -100,3 +100,11 @@ Controlador de Usuarios (UsersController)
 
 - **-Uso**
   - El sistema se accede a través de una interfaz web. Los usuarios autenticados pueden utilizar las operaciones CRUD después de iniciar sesión. Además, pueden exportar datos en los formatos Excel y TXT para su análisis y manipulación externa.
+- **Imagenes**
+![Imagen 1](https://i.ibb.co/F5cdywC/1.png)
+[![Imagen 2](https://i.ibb.co/H4rGQ63/2.png)](https://i.ibb.co/H4rGQ63/2.png)
+[![Imagen 3](https://i.ibb.co/tpXpcN7/3.png)](https://i.ibb.co/tpXpcN7/3.png)
+[![Imagen 4](https://i.ibb.co/wzzy9wx/4.png)](https://i.ibb.co/wzzy9wx/4.png)
+[![Imagen 6](https://i.ibb.co/n78s6JX/6.png)](https://i.ibb.co/n78s6JX/6.png)
+[![Imagen 7](https://i.ibb.co/KWNV5By/7.png)](https://i.ibb.co/KWNV5By/7.png)
+[![Captura](https://i.ibb.co/TrCYCRS/Captura.png)](https://i.ibb.co/TrCYCRS/Captura.png)

@@ -32,9 +32,9 @@
                     <td><?= $this->Number->format($user->edad) ?></td>
                     <td><?= h($user->email) ?></td>
                     <td class="actions">
-                        <a href="users/view/<?= $user->id ?>" class="btn btn-primary btn-icon-left"><span class="glyphicon glyphicon-eye-open"></span> Ver</a>
-                        <a href="users/edit/<?= $user->id ?>" class="btn btn-warning btn-icon-left"><span class="glyphicon glyphicon-pencil"></span> Edtar</a>
-                        <button type="button" class="btn btn-danger btn-icon-left" data-toggle="modal" data-target="#deleteUserModal"><span class="glyphicon glyphicon-trash"></span> Eliminar</button>
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $user->id]) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $user->id], ['confirm' => __('Seguro que quieres eliminar {0} {1}?', $user->nombre,$user->apellido)]) ?>
                     </td>
 
                 </tr>

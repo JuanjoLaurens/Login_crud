@@ -11,9 +11,9 @@
             <?= $this->Form->postLink(
                 __('Eliminar'),
                 ['action' => 'delete', $user->id],
-                ['confirm' => __('Seguro que quieres eliminar # {0}?', $user->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Seguro que quieres eliminar {0} {1}?', $user->nombre,$user->apellido), 'class' => 'side-nav-item']
             ) ?>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Nuestros usuarios'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -27,7 +27,6 @@
                     echo $this->Form->control('equipo');
                     echo $this->Form->control('edad');
                     echo $this->Form->control('email');
-                    echo $this->Form->control('password');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Enviar')) ?>

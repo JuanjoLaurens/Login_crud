@@ -35,10 +35,6 @@
                     <td><?= h($user->email) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($user->id) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Edad') ?></th>
                     <td><?= $this->Number->format($user->edad) ?></td>
                 </tr>

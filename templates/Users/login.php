@@ -4,7 +4,7 @@
 
     <fieldset>
 
-        <legend><?= __('Please enter your email and password') ?></legend>
+        <legend><?= __('Ingresa correo y contraseña') ?></legend>
 
         <?= $this->Form->control('email') ?>
 
